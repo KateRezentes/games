@@ -18,6 +18,7 @@ defmodule GamesWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    live "/rps", RpsLive
   end
 
   # Other scopes may use custom stacks.
