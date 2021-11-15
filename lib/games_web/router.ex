@@ -17,7 +17,7 @@ defmodule GamesWeb.Router do
   scope "/", GamesWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
+    live "/", PageLive
     live "/rps", RpsLive
   end
 
