@@ -32,12 +32,15 @@ defmodule GamesWeb.RpsLive do
     <h1>Rock. Paper. Scissors. Shoot... </h1>
       <h2>
         <%= if @status do %>
-          <a href="#" phx-click="reset" phx-value-choice=<%= 4 %>>Restart</a>
+          <a href="#" phx-click="reset" phx-value-choice=<%= 4 %>>
+            <button class="p-1 pl-2 pr-2 bg-blue-500 text-gray-100 text-sm rounded-lg focus:border-4 border-blue-300">Restart</button>
+          </a>
         <% else %>
         <%= for n <- 1..3 do %>
           <a href="#" phx-click="guess" phx-value-choice=<%= n %>><%= pick(n) %></a>
         <% end %>
         <% end %>
+
       </h2>
     """
   end
